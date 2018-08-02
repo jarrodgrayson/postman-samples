@@ -6,6 +6,23 @@
   },
 
   "item": [{
+    "name": "qTest GET Test Cases",
+    "event": [{
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+          "});"
+        ]
+      }
+    }],
+    "request": {
+      "url": "https://graysontest.qtestnet.com/api/v3/projects/80524/test-cases?parentId=4914795&page=1&size=20&expandProps=true&expandsteps=false",
+      "method": "GET"
+    }
+  },{
     "name": "A simple GET request",
     "event": [{
       "listen": "test",
