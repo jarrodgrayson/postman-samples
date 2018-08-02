@@ -54,12 +54,8 @@
         "raw": "{\"text\":\"Duis posuere augue vel cursus pharetra. In luctus a ex nec pretium...\"}"
       }
     }
-  }]
-},
-{
-	"variables": [],
-	"info": {
-		"name": "Sample Postman Tests for Universal Agent",
+  }, {
+  "name": "Sample Postman Tests for Universal Agent",
 		"_postman_id": "3a8c308b-2df2-db4c-283e-71ba08b7d6b0",
 		"description": "Testing the creation of sample tests in Postman to be executed using Uinversal Agent in qTest Manager",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
