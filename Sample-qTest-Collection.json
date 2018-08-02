@@ -1,0 +1,97 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sample Postman Tests for Universal Agent",
+		"_postman_id": "3a8c308b-2df2-db4c-283e-71ba08b7d6b0",
+		"description": "Testing the creation of sample tests in Postman to be executed using Uinversal Agent in qTest Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "qTest GET Test Cases API Call",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"raw": "https://graysontest.qtestnet.com/api/v3/projects/80524/test-cases?parentId=4914795&page=1&size=20&expandProps=true&expandsteps=false",
+					"protocol": "https",
+					"host": [
+						"graysontest",
+						"qtestnet",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"projects",
+						"80524",
+						"test-cases"
+					],
+					"query": [
+						{
+							"key": "parentId",
+							"value": "4914795",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "20",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "expandProps",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "expandsteps",
+							"value": "false",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Z3JheXNvbnRlc3R8amFycm9kZ3JheXNvbkBxYXN5bXBob255LmNvbToxNTY0NzEwMzYzOTYwOjliZjJkOGQ3MzY0NTkyMTEyYWEwZDIxYTgyNzc3OGU1 ",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
